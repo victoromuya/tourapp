@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/assets/css/newstyle.css">
+
+</head>
+
+<body>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+                        <a href="index.html" class="logo">Tour<em> Reco</em></a>
+
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="video-overlay header-text">
+        <div class="main-w3layouts wrapper">
+
+            <div class="main-agileinfo">
+                <div class="agileits-top" style="align-content: center;">
+
+                    <form action="/login" method="POST">
+                        <input type="text" placeholder="username" name="username" />
+
+                        <input type="submit" value="LOGIN" />
+                    </form>
+                    <div>
+                        <br />
+
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

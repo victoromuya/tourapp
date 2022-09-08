@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/assets/css/newstyle.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">Tour<em> Reco</em></a>
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                                <li class="main-button"><a href="{{ url_for('reg') }}">Login</a></li>
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </header>
+    <div class="video-overlay header-text">
+        <div class="main-w3layouts wrapper">
+            <div class="main-agileinfo2">
+                <div class="agileits-top">
+
+                    <form action="/admin" method="POST" enctype="multipart/form-data">
+                      
+                        <table>
+                            
+                            <tr>
+                                <td style=" padding-bottom: 10%; padding-top: 6%;">
+                            
+                                    <select name="category" id="">
+                                        <option value="tourist">Select Tourist Category</option>
+                                        <option value="tourist">Tourist</option>
+                                        <option value="historical">Historical</option>
+                                        <option value="islamic">Islamic</option>
+                                        <option value="Tourist_and_Historical">Tourist and Historical</option>
+                                    
+                                    </select>
+
+                                    <td style="padding-left: 10%; padding-right: 15%;">
+                                        <input class="form-control" type="file" name="imagefile">
+                                    </td>
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="City" name="city" />
+                                    <p style="color: rgb(226, 210, 210); font-size: small;">{{mess1}}</p>
+                                </td>
+                                <td style="padding-left: 10%; padding-right: 15%;">
+                                    <input type="text" placeholder="Region" name="region" />
+                                </td>
+                            </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Biography" name="biaography" />
+                                        
+                                    </td>
+                                    <td style="padding-left: 10%; padding-right: 15%;">
+                                        <input type="text" placeholder="name of Tourist" name="name" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Location" name="location" />
+                                
+                                    </td>
+                                    <td style="padding-left: 10%; padding-right: 15%;">
+                                        <input type="text" placeholder="Cordinates" name="cordinates" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                    <input type="text" placeholder="Worktime" name="worktime" />
+                                
+                                    </td>
+                                    <td style="padding-left: 10%; padding-right: 15%;" >
+                                    <input type="text" placeholder="Website link" name="link" />
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <p style="color: rgb(87, 238, 112); font-size: small;">{{mess2}}</p>
+                        <input type="submit" value="submit" />
+                        
+                        
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

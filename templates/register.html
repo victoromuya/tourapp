@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/assets/css/newstyle.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">Tour<em> Reco</em></a>
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                                <li class="main-button"><a href="{{ url_for('reg') }}">Login</a></li>
+                            </ul>
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </header>
+    <div class="video-overlay2 header-text">
+        <div class="main-w3layouts wrapper">
+            <div class="main-agileinfo">
+                <div class="agileits-top" style="align-content: center;">
+
+                    <form action="/reg" method="POST">
+                     
+                        <input type="text" placeholder="Username" name="username" />
+                       
+                            <p style="color: rgb(61, 3, 3); font-size: small;">{{mess}}</p>
+                      
+                            <input type="text" placeholder="Job Title" name="job_title" />
+                        <div>
+                        <select name="age" style="padding-bottom: 10px;">
+                            <option value="age range">Age Range</option>
+                            <option value="5-10">5-10</option>
+                            <option value="11-17">11-17</option>
+                            <option value="18-22">18-22</option>
+                            <option value="23-28">23-28</option>
+                            <option value="29-35">29-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value="46-55">46-55</option>
+                            <option value="55-older">55-older</option>
+                        
+                        </select>
+                        </div>
+                        <br />
+                        <div>
+                        <select name="gender" id="">
+                            <option value="Gender">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="unspecified">Unspecified</option>
+
+                        </select>
+                        </div>
+                        <br />
+                       
+                        <div>
+                        <select name="degree" id="">
+                            <option value="Your Degree">Your Degree</option>
+                            <option value="Uneducated">Uneducated</option>
+                            <option value="Secondary">Secondary</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Master">Master</option>
+                            <option value="Doctorate">Doctorate</option>
+                        </select>
+                        </div>
+                    <br />
+
+                    <div>
+                        <select name="status" id="">
+                            <option value="Marital status">Marital status</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                            
+                            </select>
+                            </div>
+                           
+                            <br />
+
+                            <div>
+                        <select name="ethnicity" id="">
+                            <option value="Ethnicity">Ethnicity</option>
+                            <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+                            <option value="Asian">Asian</option>
+                            <option value="Black or African American">Black or African American</option>
+                            <option value="Hispanic or Latino">Hispanic or Latino</option>
+                            <option value="Native Hawaiin">Native Hawaiian</option>
+                            <option value="White">White</option>
+                            <option value="Middle Eastern">Middle Eastern</option>
+                        </select>
+                        </div>
+                        <br />
+                        
+                        <div>
+                        <select name="job_industry" id="">
+                            <option value="Job Industry">Job Industry</option>
+                            <option value="Business and Financial Occupations">Business and Financial Occupations</option>
+                            <option value="Computer and Mathematical">Computer and Mathematical</option>
+                            <option value="Architecture and Engineering">Architecture and Engineering</option>
+                            <option value="Life, Physical, and Social Science">Life, Physical, and Social Science</option>
+                            <option value="Community and Social Service">Community and Social Service</option>
+                            <option value="Legal">Legal</option>
+                            <option value="Educational Instruction and Library">Educational Instruction and Library</option>
+                            <option value="Arts, Design, Entertainment, Sports, and Media">Arts, Design, Entertainment, Sports, and Media</option>
+                            <option value="Healthcare Practitioners and Technical">Healthcare Practitioners and Technical</option>
+                            <option value="Food Preparation and Serving Related">Food Preparation and Serving Related</option>
+                            <option value="Building and Grounds Cleaning and Maintenance ">Building and Grounds Cleaning and Maintenance</option>
+                            <option value="Personal Care and Service ">Personal Care and Service</option>
+                            <option value="Sales and Related">Sales and Related</option>
+                            <option value="Office and Administrative Support ">Office and Administrative Support</option>
+                            <option value="Farming, Fishing, and Forestry">Farming, Fishing, and Forestry</option>
+                            <option value="Construction and Extraction">Construction and Extraction</option>
+                            <option value="Installation, Maintenance, and Repair">Installation, Maintenance, and Repair</option>
+                            <option value="Transportation and Material Moving ">Transportation and Material Moving</option>
+                        </select>
+
+                        </div>
+                        <input type="submit" value="submit" />
+                        <p style="color: rgb(61, 3, 3); font-size: small;">{{mess1}}</p>
+                    </form>
+
+                    <div>
+
+
+                    </div>
+
+
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
